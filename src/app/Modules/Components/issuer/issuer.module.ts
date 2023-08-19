@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { CommonModule } from '@angular/common';
+import { IssuerRoutingModule } from './issuer-routing.module';
+import { MainComponent } from '../main/main.component';
+import { HomeComponent } from '../home/home.component';
+import { DoctypesComponent } from '../doctypes/doctypes.component';
+import { IssuedocComponent } from '../issuedoc/issuedoc.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
@@ -28,22 +28,17 @@ import { MatMenuModule } from '@angular/material/menu';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatSortModule } from '@angular/material/sort';
 import {MatTabsModule} from '@angular/material/tabs';
-import { SigninComponent } from './Dialogs/signin/signin.component';
-
 import {MatBadgeModule} from '@angular/material/badge';
-import { IssuerModule } from './Modules/Components/issuer/issuer.module';
-
 @NgModule({
   declarations: [
-    AppComponent,
-    LandingPageComponent,
-    SigninComponent,
-   
+    MainComponent,
+    HomeComponent,
+    DoctypesComponent,
+    IssuedocComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
+    CommonModule,
+    IssuerRoutingModule,
     MatToolbarModule,
     MatIconModule,
     FormsModule,
@@ -56,10 +51,8 @@ import { IssuerModule } from './Modules/Components/issuer/issuer.module';
     LayoutModule,
     MatSortModule,
     MatTabsModule,
-    MatBadgeModule,
-    IssuerModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    MatBadgeModule
+    
+  ]
 })
-export class AppModule { }
+export class IssuerModule { }
