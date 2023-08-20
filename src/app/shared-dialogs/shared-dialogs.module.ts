@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { CommonModule } from '@angular/common';
+
+import { SharedDialogsRoutingModule } from './shared-dialogs-routing.module';
+import { DocissuepopupComponent } from './docissuepopup/docissuepopup.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { MatInputModule } from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
@@ -27,25 +26,15 @@ import { MatMenuModule } from '@angular/material/menu';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatSortModule } from '@angular/material/sort';
 import {MatTabsModule} from '@angular/material/tabs';
-import { SigninComponent } from './Dialogs/signin/signin.component';
 import {MatBadgeModule} from '@angular/material/badge';
-import { IssuerModule } from './Modules/Components/issuer/issuer.module';
-import { SharedDialogsModule } from './shared-dialogs/shared-dialogs.module';
-
-// import { DocissuepopupComponent } from './Dialogs/docissuepopup/docissuepopup.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LandingPageComponent,
-    SigninComponent,
-    // DocissuepopupComponent,
-  
+    DocissuepopupComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
+    CommonModule,
+    SharedDialogsRoutingModule,
     MatToolbarModule,
     MatIconModule,
     FormsModule,
@@ -59,12 +48,9 @@ import { SharedDialogsModule } from './shared-dialogs/shared-dialogs.module';
     MatSortModule,
     MatTabsModule,
     MatBadgeModule,
-    IssuerModule,
-    SharedDialogsModule,
-    
-    
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  exports:[
+    DocissuepopupComponent
+  ]
 })
-export class AppModule { }
+export class SharedDialogsModule { }

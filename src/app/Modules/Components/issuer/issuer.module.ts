@@ -29,12 +29,15 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatSortModule } from '@angular/material/sort';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatBadgeModule} from '@angular/material/badge';
+
+import { SharedDialogsModule } from 'src/app/shared-dialogs/shared-dialogs.module';
+
 @NgModule({
   declarations: [
     MainComponent,
     HomeComponent,
     DoctypesComponent,
-    IssuedocComponent
+    IssuedocComponent,
   ],
   imports: [
     CommonModule,
@@ -51,8 +54,9 @@ import {MatBadgeModule} from '@angular/material/badge';
     LayoutModule,
     MatSortModule,
     MatTabsModule,
-    MatBadgeModule
-    
+    MatBadgeModule,
+    SharedDialogsModule
+  
   ]
 })
 export class IssuerModule { }

@@ -12,7 +12,7 @@
           </nav>
           <button mat-raised-button id="primary-btn"  style="padding:1vw;
           background-color: #159AFF;
-          color:white;" >Issue a document</button>
+          color:white;" (click)="issuedoc()">Issue a document</button>
           <div class="demo-section" >
             <mat-icon matBadge="7" matBadgeColor="warn" matBadgeOverlap="false"  style="font-size: 30px; line-height: -15px;">notifications</mat-icon>
               <!-- Include text description of the icon's meaning for screen-readers -->
@@ -20,9 +20,9 @@
                 Example with a home icon with overlaid badge showing the number 15
               </span>
           </div>
-          <div style="display: flex; justify-content: center; align-items: center; flex-direction: row; column-gap: 10px;">
-            <img src="../../../../assets/images/21212112.png"  alt="Loading" class="profile-image">
-            <span style="color:white;">IBM Issuer</span>
+          <div  style="display: flex; justify-content: center; align-items: center; flex-direction: row; column-gap: 10px;">
+            <img   src="../../../../assets/images/21212112.png"  alt="Loading" class="profile-image">
+            <span  style="color:white;">IBM Issuer</span>
         </div>
     </div>
   </mat-toolbar>

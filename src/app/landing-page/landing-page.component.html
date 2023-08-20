@@ -10,13 +10,14 @@
         </div>
       </mat-toolbar>
 </header>
-<main >
+<main>
+    <!-- background: radial-gradient(circle, rgba(252,252,252,1) 0%, rgba(217,239,253,1) 100%); -->
     <img style="position: absolute; top:10px; height:530px; width:510px;" src="../../assets/images/Document_Fraud.png">
-   <div style="height:80vh; width:100%; background: rgb(252,252,252);
-   background: radial-gradient(circle, rgba(252,252,252,1) 0%, rgba(217,239,253,1) 100%); display: flex; justify-content: center; align-items: center; flex-direction: column; row-gap: 4vw; ">
+   <div style="height:80vh; width:100%; background: rgb(252,252,252); background-color: white;
+   display: flex; justify-content: center; align-items: center; flex-direction: column; row-gap: 4vw; ">
     <div style=" display: flex; justify-content: center; align-items: center; flex-direction: column;">
-        <span style="font-size: 2vw;">Aramco <span style="font-size: 4vw;"><span style="color: #00488A;">Doc</span><span style="color:#159AFF">Shield</span></span> </span>
-        <span style="font-size: 2vw; padding:0.5vw;">powered by block chain</span>
+        <span style="font-size: 2vw; color:#656363;">Aramco <span style="font-size: 4vw;"><span style="color: #00488A;">Doc</span><span style="color:#159AFF">Shield</span></span> </span>
+        <span style="font-size: 1.9vw; padding:0.5vw; color: #868686;">powered by blockchain</span>
     </div>
     <div>
     <mat-form-field appearance="outline"  id="searchbar">
@@ -116,25 +117,63 @@
    <br>
    <div style="height:auto; width:auto;display: flex; justify-content: center; align-items: center; background-color: #F8F8F8; flex-direction: column; row-gap: 20px; padding: 1.5vw;">
      <div style="display:flex; justify-content:center; align-items: center; flex-direction:row ; height: auto; width: 100%;">
-         <div style=" background-color: white; box-shadow: -1px 1px 9px 0px rgba(8,8,8,0.24); height:100px; width:100px; border-radius: 50%;"></div>
-        <span style="height:0.28vw; width:10vw; background-color: #F1F1F1; margin: 2vw; border-radius: 15px;"></span>
-         <div style="background-color: white; box-shadow: -1px 1px 9px 0px rgba(8,8,8,0.24); height:100px; width:100px; border-radius: 50%;"></div>
-         <span style="height:0.28vw; width:10vw; background-color: #F1F1F1; margin: 2vw; border-radius: 15px;"></span>
-         <div style="background-color: white; box-shadow: -1px 1px 9px 0px rgba(8,8,8,0.24); height:100px; width:100px; border-radius: 50%;"></div>
-         <span style="height:0.28vw; width:10vw; background-color: #F1F1F1; margin: 2vw; border-radius: 15px;"></span>
-         <div style="background-color: white; box-shadow: -1px 1px 9px 0px rgba(8,8,8,0.24); height:100px; width:100px; border-radius: 50%;"></div>
+         <div class="round-cards">
+            <svg width="68" height="69" viewBox="0 0 88 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M66.0001 7.76074H22.0001C17.95 7.76074 14.6667 11.044 14.6667 15.0941V73.7607C14.6667 77.8108 17.95 81.0941 22.0001 81.0941H66.0001C70.0502 81.0941 73.3334 77.8108 73.3334 73.7607V15.0941C73.3334 11.044 70.0502 7.76074 66.0001 7.76074Z" stroke="#159AFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M33 81.0939V66.4272H55V81.0939" stroke="#159AFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M29.3333 22.4272H29.3679" stroke="#159AFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M58.6667 22.4272H58.7014" stroke="#159AFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M44 22.4272H44.0347" stroke="#159AFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M44 37.0938H44.0347" stroke="#159AFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M44 51.7607H44.0347" stroke="#159AFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M58.6667 37.0938H58.7014" stroke="#159AFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M58.6667 51.7607H58.7014" stroke="#159AFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M29.3333 37.0938H29.3679" stroke="#159AFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M29.3333 51.7607H29.3679" stroke="#159AFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+         </div>
+        <span class="cardline"></span>
+         <div class="round-cards">
+            <svg width="58" height="59" viewBox="0 0 88 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M58.6667 77.4272V70.0939C58.6667 66.2041 57.1215 62.4735 54.3709 59.723C51.6204 56.9725 47.8899 55.4272 44 55.4272H22C18.1102 55.4272 14.3797 56.9725 11.6291 59.723C8.87861 62.4735 7.33337 66.2041 7.33337 70.0939V77.4272" stroke="#159AFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M33 40.7606C41.1002 40.7606 47.6667 34.1941 47.6667 26.0939C47.6667 17.9937 41.1002 11.4272 33 11.4272C24.8999 11.4272 18.3334 17.9937 18.3334 26.0939C18.3334 34.1941 24.8999 40.7606 33 40.7606Z" stroke="#159AFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M80.6666 77.4271V70.0938C80.6642 66.8441 79.5826 63.6873 77.5916 61.119C75.6007 58.5506 72.8131 56.7162 69.6666 55.9038" stroke="#159AFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M58.6666 11.9038C61.8215 12.7116 64.6178 14.5464 66.6146 17.1189C68.6115 19.6915 69.6954 22.8555 69.6954 26.1121C69.6954 29.3688 68.6115 32.5328 66.6146 35.1053C64.6178 37.6779 61.8215 39.5127 58.6666 40.3205" stroke="#159AFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                
+                
+         </div>
+         <span class="cardline"></span>
+         <div class="round-cards">
+            <svg width="58" height="59" viewBox="0 0 88 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M56.8333 7.76074H31.5333C30.0666 7.76074 28.6 8.49408 27.5 9.59408C26.4 10.6941 25.6666 12.1607 25.6666 13.6274V60.5607C25.6666 62.0274 26.4 63.4941 27.5 64.5941C28.6 65.6941 30.0666 66.4274 31.5333 66.4274H67.4666C68.9333 66.4274 70.4 65.6941 71.5 64.5941C72.6 63.4941 73.3333 62.0274 73.3333 60.5607V24.2607L56.8333 7.76074Z" stroke="#159AFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M11 28.2939V75.2273C11 76.6939 11.7333 78.1606 12.8333 79.2606C13.9333 80.3606 15.4 81.0939 16.8667 81.0939H52.8" stroke="#159AFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M55 7.76074V26.0941H73.3333" stroke="#159AFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                
+         </div>
+         <span class="cardline"></span>
+         <div class="round-cards">
+            <svg width="58" height="59" viewBox="0 0 88 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M44 7.76074L55.33 30.7141L80.6666 34.4174L62.3333 52.2741L66.66 77.5007L44 65.5841L21.34 77.5007L25.6666 52.2741L7.33331 34.4174L32.67 30.7141L44 7.76074Z" stroke="#159AFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                
+         </div>
      </div>
-     <div style="height:auto; width:100%; display: flex; justify-content: center; align-items: center; flex-direction: row; column-gap: 20vw;">
+     <div style="height:auto; width:100%; display: flex; justify-content: center; align-items: center; flex-direction: row; column-gap: 19vw; font-size: 2vw; font-weight: 600;">
         <span>12</span>
-        <span>12</span>
-        <span>12</span>
-        <span>12</span>
+        <span>152</span>
+        <span>287</span>
+        <span>7</span>
      </div>
-     <div style="height:auto; width:100%; display: flex; justify-content: center; align-items: center; flex-direction: row; column-gap: 20vw;">
-        <span>name</span>
-        <span>name</span>
-        <span>name</span>
-        <span>name</span>
+     <div style="height:auto; width:100%; display: flex; justify-content: center; align-items: center; flex-direction: row; column-gap: 16vw; font-size: 1.5vw; ">
+        <span>Organization
+           </span>
+        <span> Recipients
+           </span>
+        <span> Documents
+            </span>
+        <span>Categories</span>
      </div>
    </div>
 </main>

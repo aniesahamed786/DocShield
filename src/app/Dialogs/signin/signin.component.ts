@@ -18,11 +18,8 @@ signin(){
   this.router.navigateByUrl('/main');
   this.dialogRef.close();
 }
-
-
 password: string = '';
   hide: boolean = true;
-
   togglePasswordVisibility() {
     this.hide = !this.hide;
   }
