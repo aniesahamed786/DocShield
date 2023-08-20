@@ -1,6 +1,6 @@
 
-<div style="height:auto; width:auto;  display:flex; justify-content: center; align-items: center; padding: 1vw; flex-direction: row;">
-   <div style=" border:2px solid black; height:30vw; width:15vw;  display:flex; justify-content: center; align-items: center; flex-direction: column; row-gap: 2vw;">
+<div style="height:31vw; width:60vw;  display:flex; justify-content: flex-start; align-items: center;  flex-direction: row; padding: 0px;  ">
+   <div style="  height:30vw; width:30%;  display:flex; justify-content: center; align-items: center; flex-direction: column; row-gap: 2vw; background-color: #00488A;">
    <span>Document Type</span>
    <!-- <mat-form-field>
     <mat-label>Favorite food</mat-label>
@@ -16,15 +16,16 @@
   <button mat-menu-item>Certificate</button>
 </mat-menu> -->
 <mat-form-field  class="mffw" appearance="outline">
-    <mat-label>Select Type</mat-label>
+    <!-- <mat-label>Select Type</mat-label> -->
     <mat-select>
       <mat-option value="one">First option</mat-option>
       <mat-option value="two">Second option</mat-option>
     </mat-select>
   </mat-form-field>
-</div>
-   <div style=" border:2px solid black; height:30vw; width:45vw;  display:flex; justify-content: center; align-items: center; flex-direction: column; row-gap: 3vw;">
-    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; row-gap: 2vw; ">
+   </div>
+ 
+   <div style=" height:30vw; width:70%;  display:flex; justify-content: space-around; align-items: center; flex-direction: column; row-gap: 3vw; padding-left: 2vw;">
+    <div style=" border:2px solid grey; display: flex; justify-content: flex-start; align-items: center; flex-direction: column; row-gap: 2vw; width:auto;  border-radius: 5px; padding-top: 2vw; padding-bottom: 2vw; padding-left: 2vw;">
        <div style=" display: flex; justify-content:center; align-items: center; flex-direction: row; column-gap: 1.5vw;">
         <div style="width:130px; height:auto; text-align: left;"><span>Course Name</span></div>
         <mat-form-field appearance="outline"  id="searchbar">
@@ -60,23 +61,26 @@
        </div>
     </div>
     <!-- <hr> -->
-    <div style=" border:2px solid red; display: flex; justify-content: space-between; align-items: center; flex-direction: column; row-gap: 2vw; width:100%;  ">
-        <div style=" display: flex; justify-content:space-between; align-items: center; width: 100%; height:auto; padding: 1vw;">
-           <span>Assign Singer</span>
+    <div style=" border:2px solid grey; display: flex; justify-content: space-evenly; align-items: center; flex-direction: column; row-gap: 2vw; height: auto; width:auto;  border-radius: 5px; padding-bottom: 2vw;  ">
+      
+        <div style=" display: flex; justify-content:space-between; align-items: center; width: 95%; height:auto; border-bottom: 2px solid grey;">
+           <span >Assign Singer</span>
            <button mat-button >Add</button>
         </div>
-        <div style=" display: flex; justify-content:center; align-items: center; flex-direction: row; column-gap: 1.5vw;">
-            <div style="width:130px; height:auto; text-align: left;"><span>Course Name</span></div>
+        <div style=" padding-left: 2vw; display: flex; justify-content:center; align-items: center; flex-direction: row; column-gap: 1.5vw; ">
+            <div style="width:130px; height:auto; text-align: left;">
+              <span>Course Name</span>
+            </div>
             <mat-form-field appearance="outline"  id="searchbar">
                 <div style="display:flex; justify-content: center; align-items: center; flex-direction: row;">
-                 <input  matInput placeholder="Enter assigner name">
-               
-                 <!-- <svg  fill="#00ADE5" xmlns="http://www.w3.org/2000/svg" height="4vh" viewBox="0 96 960 960" width="3vw"><path d="M796 935 533 672q-30 26-69.959 40.5T378 727q-108.162 0-183.081-75Q120 577 120 471t75-181q75-75 181.5-75t181 75Q632 365 632 471.15 632 514 618 554q-14 40-42 75l264 262-44 44ZM377 667q81.25 0 138.125-57.5T572 471q0-81-56.875-138.5T377 275q-82.083 0-139.542 57.5Q180 390 180 471t57.458 138.5Q294.917 667 377 667Z"/></svg> -->
+                  <input  matInput placeholder="Enter assigner name">
                 </div>
-                 <!-- <mat-icon matSuffix id="searchicon">search</mat-icon> -->
              </mat-form-field>
         </div>
     </div>
-</div>
-
+    <div style=" display: flex; justify-content: flex-end; align-items: center; flex-direction: row; column-gap: 2vw; width:100%;">
+      <button mat-button >Cancel</button>
+      <button mat-button >Submit</button>
+    </div>
+   </div> 
 </div>
