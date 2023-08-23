@@ -96,3 +96,8 @@ mat-toolbar {
 .cardline{
     height:0.28vw; width:10vw; background-color: #F1F1F1; margin: 2vw; border-radius: 15px;
 }
+
+#first-content::after{
+    content: "\a";
+    white-space: pre;
+}

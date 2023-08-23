@@ -19,18 +19,28 @@
     display: none;
 
 }
-::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-    color: white !important;
-  }
+// ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+//     color: white !important;
+//   }
   
-  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-thick {
-    color: white !important;
-  }
+//   ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-thick {
+//     color: white !important;
+//   }
 
 // ::ng-deep .mat-mdc-form-field-infix {
 //     min-height: 5vh;
 
 // }
+@font-face {
+    font-family: manifapro;
+    src: url(../../../assets/Fonts/ManifaPro2_2.224-Regular.otf) format('opentype');
+  }
+  
+  
+  body{
+    font-family: manifapro;
+  }
+
 
 ::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix {
     padding-top: 1vh;
@@ -42,3 +52,13 @@
 #searchbar{
     padding:0px; width:20vw; height:3vh; border-radius: 25px;
 }
+
+span{
+    font-size: 1.2vw;
+	font-family: manifapro;
+}
+
+::ng-deep .mat-form-field ::placeholder {
+    font-size: 1vw;
+    font-family: manifapro;
+  }

@@ -31,7 +31,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatBadgeModule} from '@angular/material/badge';
 
 import { SharedDialogsModule } from 'src/app/shared-dialogs/shared-dialogs.module';
-
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
 @NgModule({
   declarations: [
     MainComponent,
@@ -55,8 +56,10 @@ import { SharedDialogsModule } from 'src/app/shared-dialogs/shared-dialogs.modul
     MatSortModule,
     MatTabsModule,
     MatBadgeModule,
-    SharedDialogsModule
-  
+    SharedDialogsModule,
+    MatSidenavModule,
+    MatListModule,
+     
   ]
 })
 export class IssuerModule { }

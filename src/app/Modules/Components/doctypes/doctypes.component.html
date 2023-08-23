@@ -1,1 +1,50 @@
-<p>doctypes works!</p>
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened class="example-sidenav">
+        <mat-list>
+            <div mat-subheader style="display: flex; justify-content: space-between; align-items: center; flex-direction: row; column-gap: 5vw;">
+                <div class="search-container">
+                    <mat-icon class="search-icon">search</mat-icon>
+                    <input type="text" [(ngModel)]="searchText" (ngModelChange)="onSearchTextChange()" placeholder="Search">
+                </div>
+                 <mat-icon style="color:#159AFF; border:2px solid #159AFF; border-radius: 5px;">add</mat-icon>
+            </div>
+            <mat-list-item *ngFor="let folder of certificates; let i = index"   [class.clicked]="clickedIndex === i"
+            (click)="selecteditem(folder,i)" class="list-item">
+              <!-- <mat-icon matListItemIcon>folder</mat-icon> -->
+              <div matListItemTitle  ><span style="font-size: 1.2vw;"> {{i + 1}}.{{folder.name}}</span></div>
+              <div matListItemLine><span > {{folder.status}}</span></div>
+          </mat-list-item>
+        </mat-list>
+    </mat-drawer>
+    <div class="example-sidenav-content" >
+        <div style="display:flex; justify-content: space-between; align-items: center; width:100%; height:auto; flex-direction: row;">
+           <div style="display:flex; justify-content: space-between; align-items: center; padding:10px; height:auto; width:auto; flex-direction: row; column-gap: 10px; ">
+              <span style="font-size: 1.2vw;">
+                 {{certificate_name}}
+              </span>
+              <mat-icon style="color:#00488A">edit</mat-icon>
+           </div>
+
+           <div>
+            <button mat-button  style="border:2px solid #00488A; color:#00488A"><mat-icon>zoom_out</mat-icon><span>Design Template</span></button>
+           </div>
+        </div>
+        <mat-accordion>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false" style="width: 100%; height:auto;">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <mat-icon style="color:#00488A">bookmark</mat-icon>
+                    &nbsp; &nbsp;
+                  <span>Document Fields Template</span>
+                </mat-panel-title>
+                <!-- <mat-panel-description>
+                  Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                </mat-panel-description> -->
+              </mat-expansion-panel-header>
+              <p>I'm visible because I am open</p>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <!-- <mat-drawer-content class="example-sidenav-content" >Main content</mat-drawer-content> -->
+  </mat-drawer-container>
