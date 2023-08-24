@@ -4,7 +4,7 @@
             <div mat-subheader style="display: flex; justify-content: space-between; align-items: center; flex-direction: row; column-gap: 5vw;">
                 <div class="search-container">
                     <mat-icon class="search-icon">search</mat-icon>
-                    <input type="text" [(ngModel)]="searchText" (ngModelChange)="onSearchTextChange()" placeholder="Search">
+                    <input type="search" [(ngModel)]="searchText" (ngModelChange)="onSearchTextChange()" placeholder="Search">
                 </div>
                  <mat-icon style="color:#159AFF; border:2px solid #159AFF; border-radius: 5px;">add</mat-icon>
             </div>
@@ -12,7 +12,7 @@
             (click)="selecteditem(folder,i)" class="list-item">
               <!-- <mat-icon matListItemIcon>folder</mat-icon> -->
               <div matListItemTitle  ><span style="font-size: 1.2vw;"> {{i + 1}}.{{folder.name}}</span></div>
-              <div matListItemLine style=" display: flex; justify-content: flex-start; align-items: center;  padding-left: 10px; padding-top: 5px;"><span style="color:white; background-color: rgb(163, 255, 163); padding: 1px; border-radius: 5px;"> {{folder.status}}</span></div>
+              <div matListItemLine style=" display: flex; justify-content: flex-start; align-items: center;  padding-left: 10px; padding-top: 5px;"><span style="color:white; background-color:#CCE6D8; padding: 1px; border-radius: 5px;"> {{folder.status}}</span></div>
           </mat-list-item>
         </mat-list>
     </mat-drawer>

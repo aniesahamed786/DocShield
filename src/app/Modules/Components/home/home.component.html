@@ -7,7 +7,7 @@
  <div>
   <div class="search-container">
     <mat-icon class="search-icon">search</mat-icon>
-    <input type="text"  placeholder="Search">
+    <input type="search" [(ngModel)]="searchText" (ngModelChange)="onSearchTextChange()" placeholder="Search">
 </div>
     <!-- <mat-form-field appearance="outline"  id="homesearchbar">
         <mat-icon matSuffix id="searchicon">search</mat-icon>
@@ -20,7 +20,7 @@
 <br>
 
     <section class="example-container mat-elevation-z0" tabindex="0">
-        <table mat-table [dataSource]="dataSource">
+        <table mat-table [dataSource]="filteredItems">
       
           <!-- Position Column -->
           <ng-container matColumnDef="position">
