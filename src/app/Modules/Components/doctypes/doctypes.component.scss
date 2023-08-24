@@ -38,7 +38,9 @@ button, input{
   flex-direction: column;
   row-gap: 10px;
 }
-
+.list-item:hover{
+  cursor: pointer;
+}
 
 .list-item.clicked {
   border-left: 4px solid #159AFF; 
