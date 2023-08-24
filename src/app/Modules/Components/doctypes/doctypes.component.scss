@@ -35,7 +35,8 @@ button, input{
 .list-item{
   border-bottom: 1.5px solid rgb(199, 199, 199);
   display: flex;
-  column-gap: 10px;
+  flex-direction: column;
+  row-gap: 10px;
 }
 
 

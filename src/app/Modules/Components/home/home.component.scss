@@ -12,10 +12,10 @@ span, a{
     font-family: manifapro;
 }
 
-::ng-deep .mat-form-field-underline {
-    display: none;
+// ::ng-deep .mat-form-field-underline {
+//     display: none;
 
-}
+// }
 
 ::ng-deep .mat-mdc-form-field-infix {
     min-height: 2vh;
@@ -27,7 +27,7 @@ span, a{
 // }
 
 #homesearchbar{
-    padding:0px; width:40vw; height:2vh; border-radius: 25px;
+     width:40vw; height:2vh; border-radius: 25px;
     font-size: 1vw;
     font-family: manifapro;
 }
@@ -85,3 +85,27 @@ th{
 //   border-left: 3px solid #159AFF;
    
 // }
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    
+  }
+  
+  .search-icon {
+    margin-right: 5px;
+    color: gray;
+  }
+  input {
+    width:30vw;
+    height:2vh;
+    border-radius: 25px;
+    font-size: 1vw;
+    font-family: manifapro;
+    outline: none;
+    border: none;
+  }

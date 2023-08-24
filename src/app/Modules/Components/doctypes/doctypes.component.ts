@@ -29,7 +29,7 @@ export class DoctypesComponent {
   ];
   panelOpenState = false;
   searchText: string = '';
-  filteredItems: string[] = this.certificates;
+  filteredItems: any = this.certificates;
 
 
 
@@ -42,18 +42,8 @@ export class DoctypesComponent {
   }
 
   onSearchTextChange() {
-    
-    if(this.searchText=="") {
-      this.certificates = this.certificates.
-      console.log("");
-    }
-
-    else{
       this.filteredItems = this.certificates.filter((item:any) =>
       item.name.toLowerCase().includes(this.searchText.toLowerCase())
     );
-    console.log(this.filteredItems)
-    this.certificates = this.filteredItems;
-    }
   }
 }
