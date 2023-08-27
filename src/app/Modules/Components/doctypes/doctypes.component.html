@@ -6,7 +6,7 @@
                     <mat-icon class="search-icon">search</mat-icon>
                     <input type="search" [(ngModel)]="searchText" (ngModelChange)="onSearchTextChange()" placeholder="Search">
                 </div>
-                 <mat-icon style="color:#159AFF; border:2px solid #159AFF; border-radius: 5px;">add</mat-icon>
+                 <mat-icon style="color:#159AFF; border:2px solid #159AFF; border-radius: 5px; cursor:pointer;">add</mat-icon>
             </div>
             <mat-list-item *ngFor="let folder of filteredItems; let i = index"   [class.clicked]="clickedIndex === i"
             (click)="selecteditem(folder,i)" class="list-item">
@@ -42,7 +42,9 @@
                   Currently I am {{panelOpenState ? 'open' : 'closed'}}
                 </mat-panel-description> -->
               </mat-expansion-panel-header>
-              <p>I'm visible because I am open</p>
+              <div>
+                
+              </div>
             </mat-expansion-panel>
         </mat-accordion>
     </div>
