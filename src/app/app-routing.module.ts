@@ -9,7 +9,7 @@ const routes: Routes = [
   },
  {
   path:"main",
-  loadChildren: () => import('../app/Modules/Components/issuer/issuer.module').then((m) => m.IssuerModule)
+  loadChildren: () => import('./Modules/Components/issuerModule/issuer.module').then((m) => m.IssuerModule)
  }
 ];
 

@@ -8,7 +8,6 @@ import { BackendService } from 'src/app/Services/backend.service';
   styleUrls: ['./doctypes.component.scss']
 })
 export class DoctypesComponent {
- 
   form!: FormGroup;
   constructor(private fb: FormBuilder, private service : BackendService) {}
   ngOnInit() {
@@ -18,7 +17,6 @@ export class DoctypesComponent {
     console.log(this.service.certificates)
     
   }
-
   inputfield:boolean = false;
   clickedIndex: number = 0;
   certificate_name:string = ""
@@ -28,9 +26,7 @@ export class DoctypesComponent {
   searchText: string = '';
   certificatename: string = '';
   filteredItems: any = this.certificates;
-
   selecteditem(item:any,index:number){
-   
     // console.log("", item);
     this.certificate_name = item.name;
     this.clickedIndex = index;
@@ -94,19 +90,19 @@ export class DoctypesComponent {
   // }
 
   get itemsFormArray() {
+
     return this.form.controls['items'] as FormArray;
   }
-
   addItem(data?: { name: string; Description: string }) {
     const item = this.fb.group({
-      name: [data ? data.name : '', Validators.required],
-      Description: [data ? data.Description : '', Validators.required]
+      name: [data ? data.name : '', Validators.required]
+      // Description: [data ? data.Description : '', Validators.required]
       // Add more form controls as needed
     });
 
     this.itemsFormArray.push(item);
     console.log(this.itemsFormArray);
-    console.log(this.service.certificates[this.clickedIndex].Fields)
+    console.log(this.service.certificates[this.clickedIndex].Fields);
   }
 
   removeItem(index: number) {
@@ -123,15 +119,27 @@ export class DoctypesComponent {
       console.log(this.service.certificates[this.clickedIndex].Fields);
       console.log(this.form.value.items);
       this.form.value.items.forEach((data:any) => {
-
-        // this.service.certificates[this.clickedIndex].Fields = {};
-        this.service.certificates[this.clickedIndex].Fields.push(data);
-        // this.service.certificates[this.clickedIndex].push(data);
+      // this.service.certificates[this.clickedIndex].Fields = {};
+      this.service.certificates[this.clickedIndex].Fields.push(data);
+      // this.service.certificates[this.clickedIndex].push(data);
         console.log(data);
       }
-      
       );
     }
+  }
+  enabledisable(){
+   this.form.disable();
+   console.log(this.form.disable());
+   console.log(this.form);
+   console.log(this.form.status);
+   if(this.form.status == "DISABLED"){
+    this.form.enable();
+    console.log(this.form.status);
+   }
+   else if(this.form.status){
+    this.form.disable();
+    console.log(this.form.status);
+   }
   }
 
 }

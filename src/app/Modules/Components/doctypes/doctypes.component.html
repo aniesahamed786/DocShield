@@ -15,8 +15,7 @@
               </div>
               <mat-icon style="color:#ff5858; border:2px solid #ff5858; border-radius: 50%; cursor:pointer;" (click)="removefield()">remove</mat-icon>
             </div>
-            <mat-list-item *ngFor="let folder of filteredItems; let i = index"   [class.clicked]="clickedIndex === i"
-            (click)="selecteditem(folder,i)" class="list-item">
+            <mat-list-item *ngFor="let folder of filteredItems; let i = index"   [class.clicked]="clickedIndex === i" (click)="selecteditem(folder,i)" class="list-item">
               <!-- <mat-icon matListItemIcon>folder</mat-icon> -->
               <div matListItemTitle  ><span style="font-size: 1.2vw;"> {{i + 1}}.{{folder.name}}</span></div>
               <div matListItemLine style=" display: flex; justify-content: flex-start; align-items: center;  padding-left: 10px; padding-top: 5px;"><span style="color:white; background-color:#CCE6D8; padding: 1px; border-radius: 5px;"> {{folder.status}}</span></div>
@@ -29,9 +28,8 @@
               <span style="font-size: 1.2vw;">
                  {{certificate_name}}
               </span>
-              <mat-icon style="color:#00488A">edit</mat-icon>
+              <mat-icon style="color:#00488A" (click)="enabledisable()">edit</mat-icon>
            </div>
-
            <div>
             <button mat-button  style="border:2px solid #00488A; color:#00488A"><mat-icon>zoom_out</mat-icon><span>Design Template</span></button>
            </div>
@@ -80,10 +78,10 @@
                         <div class="search-container">
                             <input type="text"  id="name"  placeholder="Label" formControlName="name">
                         </div>
-                        <span>Description</span>
-                         <div class="search-container">
+                        <!-- <span>Description</span> -->
+                         <!-- <div class="search-container">
                           <input type="text"   id="Description"  placeholder="Description" formControlName="Description">
-                        </div>
+                        </div> -->
                         </div>
                           <mat-icon style="color:#afafaf; border:2px solid #949494; border-radius: 50%; cursor:pointer;" (click)="removeItem(i)" >remove</mat-icon>
                           

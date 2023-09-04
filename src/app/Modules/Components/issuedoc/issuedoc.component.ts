@@ -8,9 +8,7 @@ import { FormBuilder, FormGroup,FormControl, Validators,FormArray } from '@angul
 })
 export class IssuedocComponent  {
   form!: FormGroup;
-
   constructor(private fb: FormBuilder) {}
-
   ngOnInit() {
     this.form = this.fb.group({
       items: this.fb.array([]) // Initialize an empty FormArray

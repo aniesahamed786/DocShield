@@ -15,15 +15,15 @@ export class BackendService {
       Fields:[
         {
           name:"lable name1",
-          Description:"Description1"
+         
         },
         {
           name:"lable name2",
-          Description:"Description2"
+       
         },
         {
           name:"lable name3",
-          Description:"Description3"
+        
         }
       ]
     },

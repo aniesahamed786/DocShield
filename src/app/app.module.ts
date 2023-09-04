@@ -29,7 +29,7 @@ import { MatSortModule } from '@angular/material/sort';
 import {MatTabsModule} from '@angular/material/tabs';
 import { SigninComponent } from './Dialogs/signin/signin.component';
 import {MatBadgeModule} from '@angular/material/badge';
-import { IssuerModule } from './Modules/Components/issuer/issuer.module';
+import { IssuerModule } from './Modules/Components/issuerModule/issuer.module';
 import { SharedDialogsModule } from './shared-dialogs/shared-dialogs.module';
 
 // import { DocissuepopupComponent } from './Dialogs/docissuepopup/docissuepopup.component';
