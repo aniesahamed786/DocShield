@@ -10,7 +10,7 @@ import { FormBuilder, FormGroup, FormControl,FormArray, Validators } from '@angu
 export class DocissuepopupComponent {
   form!: FormGroup;
   selectedValue: any;
-  TemplateFields: any;
+  FieldLables: any;
   constructor(
     private fb: FormBuilder,
     public dialogRef: MatDialogRef<DocissuepopupComponent>,
@@ -28,24 +28,37 @@ export class DocissuepopupComponent {
  selecteditem(index:number){
       console.log(index);
       console.log(this.service.certificates[index].Fields);
-      this.TemplateFields = this.service.certificates[index].Fields;
-      this.TemplateFields.forEach( (element:any) => {
-        this.addItem(element)
-      });
+      this.FieldLables = this.service.certificates[index].Fields;
+      this.itemsFormArray.clear();
+      if(this.FieldLables.length>0){
+        this.FieldLables.forEach( (element:any) => {
+          console.log(element);
+          this.addItem(
+            {name:"",
+             Label:element.name}
+        )
+        });
+
+      }
+      else{
+       
+      }
+      
         
  }
  get itemsFormArray() {
   return this.form.controls['items'] as FormArray;
 }
 
-addItem(data?: { name: string; Description: string }) {
+addItem(data?: { name: string , Label: string}) {
   const item = this.fb.group({
-    name: [data ? data.name : '', Validators.required]
+    name: [data ? data.name : '', Validators.required],
+    Label:[data ? data.Label : '']
     // Description: [data ? data.Description : '', Validators.required]
     // Add more form controls as needed
   });
   this.itemsFormArray.push(item);
-  // console.log(this.itemsFormArray);
+  console.log(this.itemsFormArray.value);
   // console.log(this.service.certificates[this.clickedIndex].Fields)
 }
 
@@ -55,7 +68,7 @@ FinalForm() {
 }
 
 onSubmit(){
-  console.log(this.form);
+  console.log(this.form.value);
 }
 
 }
